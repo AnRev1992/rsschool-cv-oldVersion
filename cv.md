@@ -16,3 +16,6 @@ I have no practical experience in applying my knowledge on a commercial project 
 
 **Skills:** HTML5, CSS3, Git, JavaScript.
 
+**Education:** Belarusian National Technical University, Faculty of Mining Ingenering, 2014.
+
+**Language Skills:** English A2+ (Pre-Intermediate).

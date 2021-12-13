@@ -67,7 +67,7 @@
                         Profile
                     </h2>
                     <div class="profile__text">
-                        I'm 29 years old. At that moment I work as a team leader in an oil company (Belarusneft).
+                        I'm 29 years old. At that moment I work as a team leader in an oil company.
                         I decide to change the direction of my activity and do what I liked from my childhood.
                         Now I am actively involved in programming, English and front-end development.
                         I have no practical experience in applying my knowledge on a commercial project yet, but
@@ -128,18 +128,87 @@
                     </div>
                 </section>
                 <section class="work-examples">
-                    <h2 class="work-examples__title">Work examples</h2>
+                    <h2 class="work-examples__title title">Work examples</h2>
                     <div class="work-examples__wrapper">
                         <div class="work-examples__item">
                             <div class="work-examples__item-skill">JavaScript</div>
                             <div class="work-examples__item-result">
-                                <a href="https://github.com/AnRev1992/brackets">Brackets</a>
+                                <div class="work-examples__item-link">
+                                    <a href="https://github.com/AnRev1992/towel-sort">
+                                        Towel sort
+                                    </a>
+                                </div>
+                                <div class="work-examples__item-code">
+                                    <pre>
+module.exports = function towelSort (matrix) {
+    let arr = [];
+    if (matrix === undefined || matrix.length === 0) {
+        return []
+    }
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            let columIdx = i % 2 === 0 
+            ? j
+            : (matrix[i].length - j - 1);
+            arr.push(matrix[i][columIdx]); 
+        }
+    }
+    return arr;
+}
+                                    </pre>
+                                </div>
                             </div>
                         </div>
                         <div class="work-examples__item">
                             <div class="work-examples__item-skill">JavaScript</div>
                             <div class="work-examples__item-result">
-                                <a href="https://github.com/AnRev1992/morse-decoder">Morse Decoder</a>
+                                <div class="work-examples__item-link">
+                                    <a href="https://github.com/AnRev1992/morse-decoder">
+                                        Morse Decoder
+                                    </a>
+                                </div>
+                                <div class="work-examples__item-code">
+                                    <pre>
+function decode(expr) {
+    let letter = '';
+    let sliceLetter = '';
+    let result = '';
+                                        
+    for (let i = 0; i < expr.length; i = i + 10) {
+        let resultInDot = '';
+        letter = expr.slice(i, i+10);
+        branch: { 
+            for (let j = 0; j < letter.length; j++) {
+                if (letter[j] === '1') {
+                    sliceLetter = letter.slice(j);
+                    break branch;
+                }
+            }
+        }
+        if (letter === '**********') {
+            result = result + ' ';
+            sliceLetter='00';
+        }
+        for (let k = 0; k < sliceLetter.length; k = k + 2) {
+            let dotResult = '';
+            if (sliceLetter.slice(k, k+2) === '10') {
+                dotResult = '.';                    
+            }
+            else if (sliceLetter.slice(k, k+2) === '11') {
+                dotResult = '-';
+            }
+            if (dotResult !== '') {
+                resultInDot = resultInDot + dotResult;
+            }
+        }
+        if (resultInDot !== '') { 
+            result = result + MORSE_TABLE[resultInDot];
+        }
+    }
+    return result;
+}
+                                    </pre>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -158,7 +227,9 @@
                                 <img src="assets/logo-github.png" alt="logo-github">
                             </a>
                         </li>
-                        <li class="year">2021</li>
+                        <li class="year">
+                            <p>2021</p>
+                        </li>
                     </ul>
                 </nav>
             </footer>

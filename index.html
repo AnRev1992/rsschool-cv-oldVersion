@@ -16,9 +16,9 @@
 
             <img class="logo" src="assets/avatar.jpg" alt="avatar">
             <section class="contact">
-                <div class="contact__title title">
+                <h2 class="contact__title title">
                     Contact
-                </div>
+                </h2>
                 <div class="contact__text text">
                     <ul>
                         <li>Phone
@@ -34,7 +34,7 @@
                 </div>
             </section>
             <section class="education">
-                <div class="education__title title">Education</div>
+                <h2 class="education__title title">Education</h2>
                 <div class="education__text text">
                     <ul>
                         <li>
@@ -78,8 +78,8 @@
                     <h2 class="skills__title title">
                         Skills
                     </h2>
-                    <div class="skills__wrapper">
-                        <div class="skills__item">
+                    <ul class="skills__wrapper">
+                        <li class="skills__item">
 
                             <div class="skills__item-rezult">
                                 <p>HTML5</p>
@@ -89,7 +89,7 @@
                                 <span></span>
 
                             </div>
-                        </div>
+                        </li>
                         <div class="skills__item">
 
                             <div class="skills__item-rezult">
@@ -101,7 +101,7 @@
 
                             </div>
                         </div>
-                        <div class="skills__item">
+                        <li class="skills__item">
 
                             <div class="skills__item-rezult">
                                 <p>JavaScript</p>
@@ -111,8 +111,8 @@
                                 <span></span>
 
                             </div>
-                        </div>
-                        <div class=" skills__item">
+                        </li>
+                        <li class=" skills__item">
 
                             <div class="skills__item-rezult">
                                 <p>Git</p>
@@ -121,11 +121,11 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="skills__item">
+                        </li>
+                        <li class="skills__item">
                             <p>English: A2+</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
                 <section class="work-examples">
                     <h2 class="work-examples__title title">Work examples</h2>
@@ -145,8 +145,8 @@ module.exports = function towelSort (matrix) {
     if (matrix === undefined || matrix.length === 0) {
         return []
     }
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
+    for (let i = 0; i &lt; matrix.length; i++) {
+        for (let j = 0; j &lt; matrix[i].length; j++) {
             let columIdx = i % 2 === 0 
             ? j
             : (matrix[i].length - j - 1);
@@ -174,11 +174,11 @@ function decode(expr) {
     let sliceLetter = '';
     let result = '';
                                         
-    for (let i = 0; i < expr.length; i = i + 10) {
+    for (let i = 0; i &lt; expr.length; i = i + 10) {
         let resultInDot = '';
         letter = expr.slice(i, i+10);
         branch: { 
-            for (let j = 0; j < letter.length; j++) {
+            for (let j = 0; j &lt; letter.length; j++) {
                 if (letter[j] === '1') {
                     sliceLetter = letter.slice(j);
                     break branch;
@@ -189,7 +189,7 @@ function decode(expr) {
             result = result + ' ';
             sliceLetter='00';
         }
-        for (let k = 0; k < sliceLetter.length; k = k + 2) {
+        for (let k = 0; k &lt; sliceLetter.length; k = k + 2) {
             let dotResult = '';
             if (sliceLetter.slice(k, k+2) === '10') {
                 dotResult = '.';                    
@@ -222,14 +222,15 @@ function decode(expr) {
                                 <img src="assets/logo-rs.svg" alt="logo-rs">
                             </a>
                         </li>
+                        <li class="year">
+                            <p>2021</p>
+                        </li>
                         <li class="git__link">
                             <a href="https://github.com/AnRev1992">
                                 <img src="assets/logo-github.png" alt="logo-github">
                             </a>
                         </li>
-                        <li class="year">
-                            <p>2021</p>
-                        </li>
+
                     </ul>
                 </nav>
             </footer>
